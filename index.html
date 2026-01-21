@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Vibe | Premium Men's Wear</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #1a1a1a; color: white; font-family: 'Segoe UI', sans-serif; }
+        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); background-size: cover; }
+        .accent-blue { color: #3b82f6; }
+        .btn-premium { background: linear-gradient(90deg, #d1d5db, #3b82f6); }
+    </style>
+</head>
+<body>
+
+    <nav class="flex justify-between items-center p-6 bg-black/50 sticky top-0 z-50 backdrop-blur-md">
+        <div class="text-2xl font-bold tracking-tighter">PRIME<span class="accent-blue">VIBE</span></div>
+        <ul class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+            <li><a href="#" class="hover:text-blue-400">Home</a></li>
+            <li><a href="#shop" class="hover:text-blue-400">Collection</a></li>
+            <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="h-[80vh] flex flex-col justify-center items-center text-center hero-gradient px-4">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-4 uppercase">Elevate Your Style</h1>
+        <p class="text-lg md:text-xl mb-8 text-gray-300">Premium Men's Wear for the Modern Vibe.</p>
+        <a href="#shop" class="btn-premium text-black px-10 py-3 rounded-full font-bold uppercase tracking-wide hover:scale-105 transition">Shop Now</a>
+    </header>
+
+    <section id="shop" class="py-20 px-10">
+        <h2 class="text-3xl font-bold text-center mb-12">New Arrivals</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            
+            <div class="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 hover:border-blue-500 transition">
+                <img src="https://images.unsplash.com/photo-1598033129183-c4f50c7176c8?auto=format&fit=crop&w=500&q=80" alt="Shirt" class="w-full h-80 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold">Premium Cotton Shirt</h3>
+                    <p class="text-gray-400 mt-2">₹1,299</p>
+                    <button onclick="orderWhatsApp('Premium Cotton Shirt')" class="mt-4 w-full border border-blue-500 py-2 rounded hover:bg-blue-500 transition font-bold">Buy on WhatsApp</button>
+                </div>
+            </div>
+
+            <div class="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 hover:border-blue-500 transition">
+                <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=500&q=80" alt="Jeans" class="w-full h-80 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold">Slim Fit Denim</h3>
+                    <p class="text-gray-400 mt-2">₹1,899</p>
+                    <button onclick="orderWhatsApp('Slim Fit Denim')" class="mt-4 w-full border border-blue-500 py-2 rounded hover:bg-blue-500 transition font-bold">Buy on WhatsApp</button>
+                </div>
+            </div>
+
+            <div class="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 hover:border-blue-500 transition">
+                <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=500&q=80" alt="Jacket" class="w-full h-80 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold">Urban Bomber Jacket</h3>
+                    <p class="text-gray-400 mt-2">₹2,499</p>
+                    <button onclick="orderWhatsApp('Urban Bomber Jacket')" class="mt-4 w-full border border-blue-500 py-2 rounded hover:bg-blue-500 transition font-bold">Buy on WhatsApp</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-black py-10 text-center border-t border-zinc-800">
+        <p class="text-gray-400 mb-2">Contact: 8853591163</p>
+        <p class="text-gray-500">© 2026 PRIME VIBE MEN'S WEAR. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function orderWhatsApp(productName) {
+            // Aapka Updated Number
+            const phoneNumber = "918853591163"; 
+            const message = `Hello Prime Vibe, I'm interested in buying: ${productName}. Please share more details.`;
+            window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+    </script>
+
+</body>
+</html>
